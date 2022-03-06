@@ -28,14 +28,13 @@ body {
     font-style: italic;
   }
   
-  /* layout classes - TODO: put in separate file */
   .flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
   .flex-row-padding > * {
-    /* apply this css to all children of a flew-row-padding div */
+  
     padding: 0px var(--spacing-medium);
   }
   .flex-column {
@@ -46,7 +45,7 @@ body {
     flex-wrap: wrap;
   }
   
-  /* app classes - TODO: put in separate file */
+  
   .app {
     width: 100%;
     display: flex;
@@ -98,7 +97,6 @@ body {
     align-items: center;
   }
   .app-content > * {
-    /* apply this css to all children of a flew-row div */
     margin-bottom: var(--spacing-large);
   }
   
