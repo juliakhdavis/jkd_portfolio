@@ -1,4 +1,158 @@
-
-ul{
-    
-}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  #root,
+  html,
+  body {
+    height: 100%;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  /* layout classes - TODO: put in separate file */
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .flex-row-padding > * {
+    /* apply this css to all children of a flew-row-padding div */
+    padding: 0px var(--spacing-medium);
+  }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  /* app classes - TODO: put in separate file */
+  .app {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    color: white;
+  }
+  
+  .logo {
+    height: 70px;
+    pointer-events: none;
+    animation: logo-spin infinite 3s alternate ease-in-out;
+  }
+  
+  .app-header {
+    flex: 0 1 100px;
+    background-color: var(--color-background-primary);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px var(--spacing-large);
+  }
+  
+  .app-link {
+    color: var(--color-teal);
+    font-size: 18px;
+  }
+  .app-link:hover {
+    color: white;
+  }
+  
+  .app-title {
+    padding: 0px var(--spacing-large);
+  }
+  
+  .app-image-banner {
+    flex: 0 1 60px;
+    background: var(--color-background-primary);
+    border-top: 1px solid var(--color-dark-gray);
+    border-bottom: 1px solid var(--color-dark-gray);
+    justify-content: start;
+    padding: 0px calc(var(--spacing-large) + var(--spacing-small));
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .app-content {
+    flex: 1 1 auto;
+    background: var(--color-background-secondary);
+    padding: var(--spacing-xlarge) var(--spacing-xlarge);
+    align-items: center;
+  }
+  .app-content > * {
+    /* apply this css to all children of a flew-row div */
+    margin-bottom: var(--spacing-large);
+  }
+  
+  .content-box {
+    border: 1px solid var(--color-dark-gray);
+    padding: 0px var(--spacing-small);
+    max-width: 1200px;
+    width: 100%;
+  }
+  .content-title {
+    border-right: 2px solid var(--color-teal);
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: end;
+    height: 100%;
+  }
+  .content-section {
+    flex-direction: row;
+    flex-grow: 1;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .content-box {
+      flex-direction: column;
+      align-items: start;
+    }
+    .content-title {
+      flex: 1 0 30px;
+      text-align: start;
+      border-right: 0;
+    }
+    .content-box {
+      border-left: 2px solid var(--color-teal);
+    }
+  }
+  
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(-30deg);
+    }
+    to {
+      transform: rotate(30deg);
+    }
+  }
+  
+  :root {
+    --spacing-small: 4px;
+    --spacing-medium: 8px;
+    --spacing-large: 16px;
+    --spacing-xlarge: 32px;
+    --color-background-primary: #3e5540;
+    --color-background-secondary:  #215c68;
+    --color-teal: #61dafb;
+    --color-dark-gray: #818181;
+  }
