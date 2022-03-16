@@ -119,6 +119,13 @@ body {
     flex-grow: 1;
   }
   
+  .title-box {
+    background-color: var(--color-background-secondary);
+    margin: var(--spacing-large);
+    width: max-content;
+    padding: var(--spacing-medium);
+  }
+
   @media only screen and (max-width: 600px) {
     .content-box {
       flex-direction: column;
@@ -132,6 +139,15 @@ body {
     .content-box {
       border-left: 2px solid var(--color-teal);
     }
+  }
+
+  .project-box {
+    opacity: 0.7;
+    box-sizing: border-box;
+  }
+
+  .project-box:hover {
+    border: 5px solid var(--color-teal)
   }
   
   
